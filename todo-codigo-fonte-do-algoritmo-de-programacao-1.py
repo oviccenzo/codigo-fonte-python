@@ -38,20 +38,6 @@ x2 = (-b - cmath.sqrt(delta)) / (2 * a)
 print("As raizes da equacao x1 e: ", x1)
 print("As raizes da equacao x2 e: ", x2)
 
-#contador de numero
-
-numA = int(input("Digite o primeiro numero: "))
-numB = int(input("Digite o segundo numero: "))
-
-contador = numA + 12
-resultado = numA
-
-while contador < numB:
-  resultado = resultado * contador
-  contador += 2
-
-print(f"Resultado {resultado}")
-
 #Comando de repetição e comando condicional
 
 ####calcular e informa a distancia e depois calcular a distancia percorrida e informa o valor por distancia
@@ -234,9 +220,6 @@ for n in range(num1, num2):
     print(n)
 
 ####contador de numero
-
-
-
 
 numA = int(input("Digite o primeiro numero: "))
 numB = int(input("Digite o segundo numero: "))
