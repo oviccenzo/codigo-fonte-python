@@ -1,643 +1,566 @@
-# Capitulo 1: Iniciando com python
+#Capitulo 1: jornada do programa
 
-1.5 primeiros passo abra o interpretador
-
-!python --version
-
-1.6 primeira exploração
-
-1
-
-3/2
+##1.3 -primeiro programa
 
 print("hello world")
 
-# Capitulo 2: aprendendo python na prática números e strings
+'hello world!'
 
-2.1-numeros
+print('meu nome é viccenzo de oliveira')
+print('eu estou cursando o superior chamado ciência da computação')
+print('eu sou portador de deficiência audtitiva')
+print('eu tenho 23 ano e vou fazer 24 em junho dia 27 desse ano')
 
-print(1) #int
+##1.4 operadores aritmeticos
 
-print(1.0) #float
+40 + 2
 
-print(1.) #float tambem
+43-2
 
-print(1+2j) #complex
+6*7
 
-Gerando numeros por meios das funções embutidos
+(6**2) + 6
 
-int(1.0)
+6 ^ 2
 
-int('9')
+##1.5 - valores e tipos
 
-float(1)
+type(2)
 
-float('9.2')
+type(42.0)
 
-float('-inf')
+type('hello world!')
 
-float('+inf')
+type('2')
 
-float('nan')
+type('42.0')
 
-complex(1,2)
+type('hello world!')
 
-ints e longs unificando no python 3
+type(True)
 
-Alguns exemplos de números e manipulações simples
+type(False)
 
-print(3 + 2)
+type(229)
 
-print(3 + 4.2)
+type(32*2)
 
-print(4/2)
+1,000,000,000
 
-print(5/2)
+2,000,000,000
 
-print(5//2)
+(222*2,333*2,444*2,555*2,666*2,777*2,888*2,999*2)
 
-print(complex(1,2) + 2)
 
-print(complex(2,0) + 0 + 1j)
+###exercicio do capitulo 1
 
-print(2 + 0 + 1j)
+# print('olá)
 
-operadores aritmeticas
+# print(olá)
 
-print(1 + 2)
+# 2++2
 
-print(3 - 1)
+# 02
 
-print(10/2)
+# 5 5
 
-print(10//3)
+# Capitulo 2: variaveis e tipos
 
-print(10 * 2 + 1)
+###2.1 instrucao e atribuicao
 
-print(10 % 3)
+message = 'and now for something completely different'
+n = 17
+pi = 3.1415926535897932
+print(message)
+print(n)
+print(pi)
 
-print(-3)
+# 76trombones = 'big parede'
+#    76trombones = 'big parede'
+    #  ^
+# SyntaxError: invalid decimal literal
 
-print(2 ** 8)
+# mora@ = 1000000
+          # ^
+# SyntaxError: invalid syntax
 
-operadores de bits
+# class = 'Advanced Theoretical Zymurgy'
+#           ^
+# SyntaxError: invalid syntax
 
-print(1|0)
+###2.2 - expressoes e instrucoes
 
-print(1 | 5)
+42
 
-print(1^5)
+n
 
-print(4 & 1)
+n + 25
 
-print(1 << 2)
+n = 17
+print(n)
 
-print(4 >> 2)
+miles = 26.2
+miles * 1.61
 
-print(~4)
+miles = 26.2
+print(miles * 1.61)
 
-operações misturando tipos diferentes e as regras de coerção
+####exemplo do script
 
-print(100* 1.3) #preço mais 30%
+print(1)
+x = 2
+print(x)
 
-type(1 + 2.0)
+print(32)
+x = 23
+print(x)
 
-type(1+2j)
+####2.2.1-introcoues de atribuicao não produz nenhuma saida
 
-type(1.0+2j)
+print(5)
+x = 5
+print(x + 1)
 
-type(1.0+1.0)
+####ordem das operações
 
-2.3-Criando e maniupulando texto: strings
+expressoes de parentese
 
-#coding: utf-8
-"copa 2014"
+2*(3-1)
 
-'copa do mundo 2014'
+(1 + 1) ** (5 - 2)
 
-'''2014 - Copa do mundo
-'''
+###calcular e gerar o resultado da quantidade de minutos
 
-" copa 'padrão fifa'"
+minuto0 = 20
+minutes = (minuto0 * 100) / 60
+print(minutes)
 
-'copa "padrão fifa"'
+minuto1 = 30
+minutes = (minuto1 * 100) / 60
+print(minutes)
 
-print("""
-Uso: consulta_base [OPCOES]
-     -h       Exibe saida de ajuda
-     -U url   Url do dataset
-""")
+minuto2 = 40
+minutes = (minuto2 * 100) / 60
+print(minutes)
 
-print(("Copa" "2014") == "Copa2014")
-
-input('Em qual cidade o legado da copa foi relevant'
-      'para a população')
-
-len(strings), explicação len e para o tamanho da string
-
-st = "macarana"
-
-st[0]
-
-st[1:4]
-
-st[2:]
-
-st[:3]
-
-len(st)
-
-Sequencias string
-
-print("m" in "macarana")
-
-print("x" not in "macarana")
-
-("m" +"aracana")
-
-"a" * 3
-
-imutabilidade: novas strings criadas a partir de outras strings
-
-minha_str = "livro python 3"
-print(minha_str[13] + "2")
-
-copiando e manipulando texto com a string
-
-minha_str = "livro python 3"
-minha_str = minha_str[0:13] + "2"
-print(minha_str)
-
-minha_str = "livro python 3"
-minha_str = minha_str.replace("3","2")
-print(minha_str)
-
-"macarana".capitalize()
-
-"macarana".count("a")
-
-"macarana".startswith("m")
-
-"macarana".endswith("z")
-
-"copa de 2014".split(" ")
-
-" ".join(["Copa","de" ,"2014"])
-
-"copa de 2014".replace("2014","2018")
-
-interpolando a string
-
-(("%d dias para copa") % (100))
-
-"{} dias para copa".format(100)
-
-"{dia} dias para copa".format(dia=100)
-
-"{:<60}".format("alinhados á esquerda, ocupando 60 posições")
-
-"{:>60}".format("alinhados á esquerda, ocupando 60 posições")
-
-"{:^60}".format("centralizados á esquerda, ocupando 60")
-
-operações misturados tipos diferentes e as regras de coerção
-
-print(100 * 1.3) #preço mais de 30%
-
-explorando as operações por conta propria
-
-type(1 + 2.0)
-
-type(1 + 2j)
-
-type(1.0 + 1.0)
-
-#Exemplo pratica
-
-
-calculo o total do salario
-
-saldo = float(input("Digite o saldo: "))
-salario = float(input("Digite o salario: "))
-
-totalDoSalario = saldo * salario
-
-print(f"O total do saldo com porcentagem é: {totalDoSalario}")
-
-complex(1 + 2, 2 + 2) #n1 + n2 , n2 + n1 , n1 + n3
-
-n1 = int(input("Digite o primeiro numero -> n1: "))
-n2 = int(input("Digite o segundo numero -> n2:"))
-n3 = int(input("Digite o terceiro numero -> n3:"))
-
-complex(n1 + n2 + n3)
-
-print(f"O numero complexo é: {complex(n1 + n2, n2 + n1) , n2 + n3}")
-
-st = 'ola mundo'
-
-st[0]
-
-st[1:4]
-
-st[2:]
-
-st[:3]
-
-len(st)
-
-st = 'python 4'
-
-len(st)
-
-st = 'ola meu nome é viccenzo de oliveira nunes resende , eu sou pcda'
-
-len(st)
-
-#Capitulo 3:Manipulações básicas
-
-3.1 Uma calculadora: o exemplo revisado
-
-imposto = 0.27
-salario = 5000
-print("Salario real: {}".format(salario - (salario * imposto)))
-print("Imposto: {}".format(salario * imposto))
-
-3.1.1
-
-imposto = 0.27
-salario = 3000
-print("Valor real: {0}".format(salario - (salario * imposto)))
-
-3.2-Pegando dados no terminal
-
-salario = int(input("Digite o salário: "))
-imposto = float(input("Imposto em % (exemplo: 27.5)? "))
-print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
-
-3.3-Comparações: maior, menor, igual e outras
-
-print(1 >= 1)
-
-print(2 < 1)
-
-print(9 == 9)
-
-print(9 != 8)
-
-print(2 <= 3)
-
-print(1 == 1.0)
-
-# print(10 >1j) possui o erro esse codigo
-
-3.4-Condicionais if else elif e else
-
-salario = int(input("Salario? "))
-imposto = float(input("Imposto? "))
-if imposto == '':
-  imposto = 27.5
-else:
-  imposto = float(imposto)
-print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
-
-indentação dos blocos de códigos
-
-imposto = float(input("Imposto? "))
-if imposto < 10:
-  print("Medio")
-elif imposto < 27.5:
-  print("Alto")
-else:
-  print("Muito alto")
-
-comando if
-
-salario = int(input("Salario? "))
-imposto = float(input("Imposto em % (exemplo: 27.5)? "))
-
-if not imposto:
-  imposto = 27.5
-else:
-  imposto = float(imposto)
-
-print("Valor real: {0}".format( salario * (imposto * 0.01)))
-
-Expressão if
-
-imposto = 0.3
-"alto" if imposto > 0.27 else "baixo"
-
-imposto = 0.10
-"alto" if imposto > 0.27 else "baixo"
-
-valor_imposto = "alto" if imposto > 0.27 else "baixo"
-print(valor_imposto)
-
-
-3.5 Operações logicos
-
-imposto = float(input("Imposto? "))
-if imposto < 10:
-  print("baixo")
-elif imposto >= 10. and imposto <= 27.:
-  print("medio")
-elif imposto > 27. and imposto < 100:
-  print("alto")
-else:
-  print("imposto invalido")
-
-
-3.6 - loops com while
-
-salario = float(input("Salario? "))
-imposto = 27.
-while imposto > 0:
-  imposto = (input("Imposto ou (0) para sair: "))
-  if not imposto:
-    imposto = 27.
-  else:
-    imposto = float(imposto)
-  print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
-
-o loop pode ser interrompido com um comando o break que é quebrar linha
-
-salario = float(input("Salario? ")) #esse linha falar para digitar qualquer valor do salario
-imposto = 27 #esse imposto tem o valor de 27
-while imposto > 0:
-  imposto = input("Imposto ou (s) para sair: ")
-  if not imposto:
-    imposto = 27.
-  elif imposto == 's':
-    break
-  else:
-    imposto = float(imposto)
-  print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
-
-
-3.7 - primeiro estrutura de dados: listas
-
-lista = [1,2,3,4,5]
-print(lista)
-
-lista = ["salario","imposto"]
-print(lista)
-
-lista = [1, "salario"]
-print(lista)
-
-lista = [[1,2,3], "salario",10]
-print(lista)
-
-Sequencia de lista em python ou seja podemos perguntar seu tamanho e acessar elementos por indices ou trechos
-
-lista =["impostos","salarios","altos","baixos"]
-(lista[0] , lista[1] , lista[2] , lista[3])
-
-
-
-lista são mutaveis
-
-lista = ["impostos","salarios","altos","baixos"]
-(lista[0] ,lista[1] ,lista[2], lista[3])
-
-ifs e listas
-
-lista = []
-
-if lista:
-  print("Nunca sou executado")
-else:
-  print("Sempre sou executado")
-
-3.8 loop pythônicos com for e listas
-
-imposto = ['MEI','Simples']
-
-for imposto in imposto:
-  print(imposto)
-
-comando for em detalhe
-
-lista = [0,1,2,3,4,5,6,7,8,9,10]
-
-for i in lista:
-  print(i)
-
-3.9 - Percorrendo intervalos de zero ate n com range()
-
-for i in range(11):
-  print(i)
-
-print(range(11-1))
-
-Exemplo do tipo que é range
-
-#Gerar lista com (fim)
-print(list(range(11)))
-
-for i in range(11):
-  print(i)
-
-#Gerar com(inicio, fim)
-print(list(range(12,22)))
-
-for i in range(12,22):
-  print(i)
-
-#Gerar com (inicio, fim, passo)
-print(list(range(10,200,9)))
-
-for i in range(10,39,9):
-  print(i)
-
-# import math
-num1 = int(input("Digite o primeiro numero: "))
-num2  = int(input("Digite o segundo numero: "))
-num3  = int(input("Digite o terceiro numero: "))
-
-soma = ((num1 + num2) * num3)
-
-print(range(soma))
-
-3.10 Enumerando coleções com for e função enumerate
-
-impostos = ['MEI - micro empreendedor individual','ICMS - Imposto sobre Operações relativas','Imposto sobre Transmissão Causa mortis e Doação','IPI - Imposto sobre Produtos Industrializados','IOF - Imposto sobre Operações Financeiras','IRPF -  restituição de Imposto de Renda de Pessoas Físicas ','CSLL - Contribuição Social Sobre o Lucro Líquido']
-
-for imposto in enumerate(impostos):
-  print(imposto)
-
-# salario = [1234,2032,3421,4567,5890]
-a = int(input("Digite o primeiro numero a: ")) #44 + 46 = 90 / 2 = 45
-b = int(input("Digite o segundo numero b: "))
-c = int(input("Digite o terceiro numero c: "))
-
-salario = [a + b,b + c, c + a]
-
-for i in enumerate(salario):
-  print(i)
-
-3.11 declarando funções comando def
-
-def sum(a,b):
-  return a + b #+ c
-
-c = sum(1,3)
-print(c)
-
-3.12 valores padronizados de argumentos
-
-def salarioDescontadoImposto(salario, imposto = 27.):
-  return salario - (salario * (imposto * 0.01))
-
-salarioDescontadoImposto(5000)
-
-3.13 parametros nomeados
-
-salarioDescontadoImposto(5000, imposto=0.10)
-
-3.14 recebendo um numero arbitrario de argumentos: packing & unpacking
-
-from datetime import date
-
-d = (2013, 3 , 15)
-date(d[0], d[1], d[2])
-
-exemplo 1: que é o packing que está na mesmo ordem só mudando o codigo
-
-from datetime import date
-d = (2013, 3 , 15)
-date(*d)
-
-exemplo 2: a configuração do administrador ou ativo , verdade ou falso
-
-def novoUso(active = True, admin = False):
-  print(active)
-  print(admin)
-
-config = {"active": False,
-          "admin" : True}
-
-novoUso(config.get("active"),config.get("admin"))
-
-
-exemplo 3: o mesmo codigo só mudando linha do codigo para ficar mais exunto e elegante
-
-def novoUso(active = True, admin = False):
-  print(active)
-  print(admin)
-
-config = {"active" : False , "admin" : True }
-
-novoUso(**config)
-
-Exemplo 4: unpacking dos argumentos
-
-def unpackingExperiment(*args):
-  args1 = args[0]
-  args2 = args[1]
-  other = args[2:]
-  print(args1)
-  print(args2)
-  print(other)
-
-unpackingExperiment(1,2,3,4,5,6)
-
-Exemplo 5: kwargs dos argumentos
-
-def unpackingExperiment(**kwargs):
-  print(kwargs)
-
-unpackingExperiment(named="Teste", other = "Other")
-
-3.15 usando código já pronto: importando módulos
+###exponenciação e a proxima precedencia que possui mais alta da quantidade de numero
 
 import math
-print(math.sqrt(9))
+int(1 + math.pow (2,3))
 
-exemplo do erro
+###elevar ao cubo + 9
 
-# import math
-# math = 10
-# print(math.sqrt(9))
-# exemplo do erro
-# AttributeError                            Traceback (most recent call last)
+import math
+print(int(2 * math.pow(3,2)) )
+print(int(2 * math.pow(3,2) + 9))
+print(int(2 * math.pow(3,3)))
+print(int(2 * math.pow(3,3) + 9))
+print(int(2 * math.pow(3,3) + 18))
+print(int(2 * math.pow(3,3) + 27))
+print(int(2 * math.pow(3,3) + 36))
+print(int(2 * math.pow(3,3) + 45))
+print(int(2 * math.pow(3,3) + 54))
 
-# /tmp/ipython-input-4096810097.py in <cell line: 0>()
-#       1 import math
-#       2 math = 10
-# ----> 3 print(math.sqrt(9))
+import math
+int(2 * math.pow(3,2))
 
-# AttributeError: 'int' object has no attribute 'sqrt'
+###multplicação e divisão que tem a alta precedencia do que a adição e da subtração
 
-exemplo 3 criar um modulo alia ou um objeto importado
+2*3-1
 
-import math as matematica
+int(6+4/2)
 
-print(matematica.sqrt(9))
+(6+5/2)
 
-exemplo 4: importar apenas um objetos especifico para uso do objeto que é from o modulo e depois o import que importar
+int(6+6/2)
 
-from unittest import TestCase as tc
+(6+7/2)
 
-print(tc)
+int(6+8/2)
 
-from math import log2 as l2
+###operacoes com strings
 
-print(l2(1024))
+# '2'-'1'
+# ----> 1 '2'-'1'
+# TypeError: unsupported operand type(s) for -: 'str' and 'str'
 
-# Capitulo 4: primeiro programa: download de dados da copa 2014
+# 'eggs'/'easy'
+# ----> 1 'eggs'/'easy'
+# # TypeError: unsupported operand type(s) for /: 'str' and 'str'
 
-4.1 criando uma função para fazer dowloada no navegador da web e ler o tamanho do arquivos
+# "third" * "a charm"
+# ----> 1 "third" * "a charm"
+# TypeError: can't multiply sequence by non-int of type 'str'
 
-##indereço do buffe size
-BUFF_SIZE = 1024
-def dowloadLength(response, output, length):
-  times = length / BUFF_SIZE
-  if length % BUFF_SIZE > 0:
-    times += 1
-  for time in range(times):
-    output.write(response.read(BUFF_SIZE))
-    print("Dowloaded %d " % (((time * BUFF_SIZE)/length)*100))
+###mais ha duas expressoes, + e *
 
+first = "throat"
+second = "warbler"
+first + second
 
-criando outra função para download na web
+' spam ' * 3
 
-def dowload(response, output):
-  totalDowloaded = 0
-  while True:
-    data = response.read(BUFF_SIZE)
-    totalDowloaded += len(data)
-    if not data:
-      break
-    output.write(data)
-    print(f"Downloaded {bytes}".format(bytes = totalDowloaded))
+###operador de multiplicacao da string
 
+' spam ' *3
 
-4.2 unindo dois programa completo para formar um só programa
+' viccenzo ' * 3
 
-# #coding: utf-8
-# import io
-# import sys
-# import urllib.request as request
+' spam ' + ' spam ' + ' spam ' * 3
 
-# BUFF_SIZE = 1024
+print(2**2)
+print(3**3)
+print(4**4)
+print(5**5)
+print(6**6)
+print(7**7)
+print(8**8)
+print(9**9)
+print(10**10)
 
-# def main():
-#   response = request.urlopen(sys.argv[1])
-#   out_file = io.FileIO("saida.zip", mode="w")
+2**7
 
-#   content_length = response.getheader("Content-Length")
-#   if content_length:
-#     length = int(content_length)
+'spam'*3
 
-4.3 definindo funções main
+###comentario da operacoes com a string e operador de matematica + e *
 
-def main():
-  print("ola")
+minuto3 = 60
+percentage = (minuto3 * 100) / 60 #porcentage de uma hora
+# print(int(percentage))
 
-if __name__ == "__main__":
-  main()
+n = 42
+n
 
+xy = 1
+(xy)
+
+###exercicio do capitulo 2
 
 
+
+# Capitulo 3: funcoes
+
+###3.1 - chamada de função
+
+type(42)
+
+# int("hello world")
+# ValueError: invalid literal for int() with base 10: 'hello world'
+
+int(3.99999)
+
+int(-2.3)
+
+float(32)
+
+float('3.14159')
+
+str(32)
+
+str(3.14159)
+
+###3.2 funcoes matematica
+
+####primeiro exemplo usa math.log10 para calcular a proporção de sinal ruído decibeis
+
+%%capture
+!pip install math
+
+import math
+
+signal_power = 10
+noise_power = 20
+
+ratio = signal_power / noise_power
+decibel = 10 * math.log10(ratio)
+radius = 0.7
+height = math.sqrt((radius))
+
+print(f"O valor do decibel é; {decibel}")
+print(f"O valor do height é: {height}")
+
+####segundo exemplo encontra o seno de radians.O nome da variável indica sin e outras funções.
+
+import math
+
+degrees1 = 45
+radians1 = degrees1 / 180.0 * math.pi
+# math.sin(radians1)
+print(f"O valor do seno é: {math.sin(radians1)}")
+
+###exercicio do capitulo 3
+
+
+
+
+# Capitulo 4: Estudo de caso: projeto de interface
+
+
+###4.1 modulo de turtle
+
+%%capture
+!pip install ColabTurtle
+
+import ColabTurtle.Turtle as bob
+
+
+bob.initializeTurtle()
+bob.forward(100)
+bob.left(90)
+bob.forward(200)
+bob.left(90)
+bob.forward(100)
+bob.left(90)
+bob.forward(200)
+bob.forward(90)
+bob.forward(200)
+bob.left(90)
+
+%%capture
+!pip install ColabTurtle
+
+import ColabTurtle.Turtle as bob
+
+# Inicializa a tela do Turtle no Colab
+bob.initializeTurtle()
+
+# Comandos de movimento
+bob.forward(100)
+bob.left(90)
+bob.forward(100)
+
+###4.2 - repetição simples
+
+
+import ColabTurtle.Turtle as bob
+
+bob.initializeTurtle()
+bob.forward(100)
+bob.left(90)
+bob.forward(100)
+bob.left(90)
+bob.forward(100)
+bob.left(90)
+bob.forward(100)
+
+for i in range(4):
+  print("Hello world")
+
+for i in range(4):
+  bob.forward(100)
+  bob.left(90)
+
+##exercicio do capitulo 4
+
+###4.3 - exercicio
+A seguir, uma série de exercícios usando TurtleWorld. Eles servem para divertir, mas
+também têm outro objetivo. Enquanto trabalha neles, pense que objetivo pode ser.
+As seções seguintes têm as soluções para os exercícios, mas não olhe até que tenha
+terminado (ou, pelo menos, tentado).
+1. Escreva uma função chamada square que receba um parâmetro chamado t, que é um
+turtle. Ela deve usar o turtle para desenhar um quadrado.
+Escreva uma chamada de função que passe bob como um argumento para o square e
+então execute o programa novamente.
+2. Acrescente outro parâmetro, chamado length, ao square. Altere o corpo para que o
+comprimento dos lados seja length e então altere a chamada da função para fornecer
+um segundo argumento. Execute o programa novamente. Teste o seu programa com
+uma variedade de valores para length.
+3. Faça uma cópia do square e mude o nome para polygon. Acrescente outro parâmetro
+chamado n e altere o corpo para que desenhe um polígono regular de n lados.
+Dica: os ângulos exteriores de um polígono regular de n lados são 360/n graus.
+4. Escreva uma função chamada circle que use o turtle, t e um raio r como parâmetros e
+desenhe um círculo aproximado ao chamar polygon com um comprimento e número
+de lados adequados. Teste a sua função com uma série de valores de r.Dica: descubra a circunferência do círculo e certifique-se de que length * n =
+circumference.
+5. Faça uma versão mais geral do circle chamada arc, que receba um parâmetro
+adicional de angle, para determinar qual fração do círculo deve ser desenhada. angle
+está em unidades de graus, então quando angle=360, o arc deve desenhar um círculo
+completo.
+
+#Exercicio 1
+
+#Exercicio 2
+
+#Exercicio 3
+
+#Exercicio 4
+
+#Exercicio 5
+
+#Capitulo 5: Condicionais e recursividade
+
+def print_n(s,n):
+  if n <= 0:
+    return
+  print(s)
+  # print_n(s,n-1) 
+
+resultado1 = print_n('viccenzo',2)
+
+###exercicio do capitulo 5
+
+#exercicio 5.1:
+import time
+
+time.time()
+
+#exercicio 5.2:
+
+
+#exercicio 5.4:
+def recurse(n,s):
+  if n == 0:
+    print(s)
+  else:
+    recurse(n-1,n+2)
+recurse(3,0)
+
+%%capture
+!pip install ColabTurtle
+import ColabTurtle.Turtle as bob
+
+#exercicio 5.6:
+def draw(t,length,n):
+  if n == 0:
+    return
+  angle = 50
+  t.forward(length*n)
+  t.left(angle)
+  draw(t,length,n-1)
+  t.right(2*angle)
+  draw(t,length,n-1)
+
+bob.initializeTurtle() # Initialize the turtle display
+resultado4 = draw(bob,5,5)
+
+# Capitulo 6 Funções com resultado
+
+#####A função que gera o retorno do valor
+
+radius1 = 2
+radians2 = 3
+
+e = math.exp(1.0)
+height1 = radius1 * math.sin(radians2)
+print(e)
+print(height1)
+
+#####calcular o valor da funcao da area
+
+def area(radius2 ):
+  a = math.pi * radius2 ** 2
+  return a
+  print(a)
+
+
+print(area(10))
+print(area(11))
+print(area(12))
+print(area(13))
+print(area(14))
+
+#####é a mesma coisa só que usa o return que calcular direto o que eu quero dizer que é a mesma só que possui o mesmo resultado do programa anterior que usa a = math.pi * radius2 ** 2 e depois usa o return
+
+def area1(radius4):
+  return math.pi * radius4 ** 2
+
+print(area1(10)) 
+
+####Calcular o valor absoluto do retorno
+
+def absolute_value(x):
+  if x < 0:
+    return -x
+  else:
+    return x
+
+print(absolute_value(0))
+print(absolute_value(1))
+print(absolute_value(-1))
+
+####calcular o valor absoluto do retorno
+
+def absolute_value1(x1):
+  if x1 < 0:
+    return -x1
+  if x1 > 0:
+    return x1
+
+print(absolute_value1(0))
+print(absolute_value1(1))
+
+####valor absoluto é none
+
+absolute_value2 = None
+print(absolute_value2) 
+
+####calcular a distancia
+
+def distance(x1,y1,x2,y2):
+  return 0.0
+
+print(f"A distancia eh: {distance(1,2,3,4)} cm")
+
+####calcular distancia e encontra a diferença x2 - x1 e y2 - y1
+
+def distance1(x1,y1,x2,y2):
+  dx = x2 - x1
+  dy = y2 - y1
+  print(f"A diferenca de x eh: {dx}")
+  print(f"A diferenca de y eh: {dy}")
+  return 0.0
+
+print(distance1(4,2,6,8))
+
+# Capitulo 7: Iteração
+
+# Capitulo 8: Strings
+
+
+# Capitulo 9 estudos de caso: jogos de palavras
+
+# Capitulo 10: Lista
+
+# Capitulo 11: Dicionarios
+
+# Capitulo 12: Tuplas
+
+# Capitulo 13: estudos de caso: selecao de estrutura de dados
+
+# Capitulo 14: arquivos
+
+# Capitulos 15: Classes e objetos
+
+# Capitulo 16: Classes e funcoes
+
+# Capitulo 17: Classes e metodos
+
+# Capitulo 18: Herança
+
+# Capitulo 19: Extra
+
+#capitulo 20:
+
+
+#capitulo 21:
+
+#nova secao:
+
+numeros = [1,2,3,4,5,6,7,8,9]
+numeros1 = [10,11,12,13,14,15,16,17,18]
+resultado = []
+x = 3
+
+for numero in numeros:
+  resultado.append(numero * x)
+
+for numero1 in numeros1:
+  resultado.append(numero1 * x)
+
+print(resultado)
+
+minute = float(input("Digite qualquer numero minuto: "))
+
+porcentagem = (minute * 100) / 60 #% minute
+
+print(f"A porcentagem de minuto eh: {porcentagem:.4f} %")
