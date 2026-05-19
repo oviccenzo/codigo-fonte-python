@@ -2,12 +2,12 @@
 
 print(1)
 
-a = 120
-b = 160
-c = 202 # Alterado para 1 para o loop iterar a cada passo
+a = int(input("Digite um numero (a): "))
+b = int(input("Digite um numero (b): "))
+c = int(input("Digite um numero (c): "))
 
 for i in range(int(a),int(b),int(c)):
-    print(int(a + b + c) // 2)
+    print(int(a + b + c) * i)
 
 print("Hello World")
 
@@ -216,7 +216,7 @@ Capitulo 3: Manipulações básicas
 
 #Capitulo 3:Manipulações básicas
 
-3.1 Uma calculadora: o exemplo revisado
+####3.1 Uma calculadora: o exemplo revisado
 
 imposto = 0.27
 
@@ -226,7 +226,7 @@ print("Salario real: {}".format(salario - (salario * imposto)))
 
 print("Imposto: {}".format(salario * imposto))
 
-Aplicando formatação da strings é um float
+####Aplicando formatação da strings é um float
 
 imposto = 0.27
 
@@ -234,7 +234,7 @@ salario = 3000
 
 print("Valor real: {0}".format(salario - (salario * imposto)))
 
-3.2-Pegando dados no terminal
+####3.2-Pegando dados no terminal
 
 salario = int(input("Digite o salário: "))
 
@@ -242,7 +242,7 @@ imposto = float(input("Imposto em % (exemplo: 27.5)? "))
 
 print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
 
-3.3-Comparações: maior, menor, igual e outras
+####3.3-Comparações: maior, menor, igual e outras
 
 print(1 >= 1)
 
@@ -257,8 +257,9 @@ print(2 <= 3)
 print(1 == 1.0)
 
 # print(10 >1j)
+# TypeError: '>' not supported between instances of 'int' and 'complex'
 
-3.4-Condicionais if else elif e else
+####3.4-Condicionais if else elif e else
 
 salario = int(input("Salario? "))
 
@@ -271,7 +272,7 @@ else:
 
 print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
 
-indentação dos blocos de códigos
+####indentação dos blocos de códigos
 
 imposto = float(input("Imposto? "))
 
@@ -282,7 +283,7 @@ elif imposto < 27.5:
 else:
   print("Muito alto")
 
-Expressão if
+####Expressão if
 
 imposto = 0.3
 
@@ -297,7 +298,7 @@ valor_imposto = "alto" if imposto > 0.27 else "baixo"
 
 print(valor_imposto)
 
-3.5 Operações logicos
+####3.5 Operações logicos
 
 imposto = float(input("Imposto? "))
 
@@ -311,7 +312,7 @@ else:
   print("imposto invalido")
 
 
-3.6 - loops com while
+####3.6 - loops com while
 
 salario = float(input("Salario? "))
 
@@ -325,7 +326,7 @@ while imposto > 0:
     imposto = float(imposto)
   print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
 
-o loop pode ser interrompido com um comando break
+####o loop pode ser interrompido com um comando break
 
 salario = int(input("Salario? "))
 
@@ -342,7 +343,7 @@ while imposto > 0:
   print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
 
 
-3.7 - primeiro estrutura de dados: listas
+####3.7 - primeiro estrutura de dados: listas
 
 lista = [1,2,3,4,5]
 print(lista)
@@ -356,7 +357,7 @@ print(lista)
 lista = [[1,2,3], "salario",10]
 print(lista)
 
-Sequencia de lista em python ou seja podemos perguntar seu tamanho e acessar elementos por indices ou trechos
+####Sequencia de lista em python ou seja podemos perguntar seu tamanho e acessar elementos por indices ou trechos
 
 lista =["impostos","salario","altos","baixos"]
 
@@ -366,7 +367,7 @@ lista[-1]
 
 lista[2:4]
 
-lista são mutaveis
+####lista são mutaveis
 
 lista = ["impostos","salarios","altos","baixos"]
 
@@ -376,7 +377,7 @@ lista[3] = "baixo"
 
 print(lista)
 
-ifs e listas
+####ifs e listas
 
 lista = []
 
@@ -385,32 +386,32 @@ if lista:
 else:
   print("Sempre sou executado")
 
-3.8 loop pythônicos com for e listas
+####3.8 loop pythônicos com for e listas
 
 imposto = ['MEI','Simples']
 
 for imposto in imposto:
   print(imposto)
 
-comando for em detalhe
+####comando for em detalhe
 
 lista = [0,1,2,3,4,5,6,7,8,9,10]
 
 for i in lista:
   print(i)
 
-Exemplo do codigo no intervalo de zero ate n
+####Exemplo do codigo no intervalo de zero ate n
 
 
 
-3.9 - Percorrendo intervalos de zero ate n com range()
+####3.9 - Percorrendo intervalos de zero ate n com range()
 
 for i in range(11):
   print(i)
 
 print(range(11-1))
 
-Exemplo do tipo que é range
+####Exemplo do tipo que é range
 
 #Gerar lista com (fim)
 print(list(range(11)))
@@ -441,7 +442,7 @@ print(range(soma))
 
 
 
-3.10 Enumerando coleções com for e função enumerate
+####3.10 Enumerando coleções com for e função enumerate
 
 impostos = ['MEI - micro empreendedor individual','ICMS - Imposto sobre Operações relativas','Imposto sobre Transmissão Causa mortis e Doação','IPI - Imposto sobre Produtos Industrializados','IOF - Imposto sobre Operações Financeiras','IRPF -  restituição de Imposto de Renda de Pessoas Físicas ','CSLL - Contribuição Social Sobre o Lucro Líquido']
 
@@ -458,7 +459,78 @@ salario = [a + b,b + c, c + a]
 for i in enumerate(salario):
   print(i)
 
-3.11 declarando funções comando def
+####3.11 declarando funções comando def
+
+def sum(a,b):
+  return a + b
+
+c = sum(1,3)
+print(c)
+
+####3.12 Valores padronizados de argumentos
+
+def salario_desconto(salario2,imposto = 27.):
+  return salario2 - (salario2 * (imposto * 0.01))
+
+print(f'O valor do salario eh: {salario_desconto(5000)}')
+
+####exemplo pratica do função def
+
+def calcular(pa,pg,sn):
+  pa = int(input("Digite o primeiro numero a: ")) #44 + 46 = 90 / 2 = 45
+  pg = int(input("Digite o segundo numero b: "))
+  sn = int(input("Digite o terceiro numero c: "))
+  soma = pa + pg + sn
+  return soma
+
+# soma = pa + pg + sn
+print(f"O resultado dos tres numero eh: {calcular(2,3,4)}")
+
+
+####3.13 Parâmetros nomeados
+
+print(f"O salario do desconto eh: {salario_desconto(salario2=5000)}")
+print(f"O salario do desconto eh: {salario_desconto(4000, imposto=0.1)}")
+print(f"O salario do desconto eh: {salario_desconto(5000, imposto = 0.1)}")
+print(f"O salario do desconto eh: {salario_desconto(6000, imposto = 0.1)}")
+print(f"O salario do desconto eh: {salario_desconto(7000, imposto = 0.1)}")
+print(f"O salario do desconto eh: {salario_desconto(8000, imposto = 0.1)}")
+print(f"O salario do desconto eh: {salario_desconto(9000, imposto = 0.1)}")
+
+
+
+####3.14 Recebendo um número arbitrário de argu- mentos: packing & unpacking
+
+from datetime import date
+d = (2019,3,5)
+date(d[0], d[1], d[2])
+
+####packing
+
+from datetime import date
+d = (2019,3,5)
+date(*d)
+
+def new_user(activate=False, admin=False):
+  print(activate)
+  print(admin)
+
+config = {"activate":False,
+          "admin":True}
+new_user(config.get('activate'), config.get('admin'))          
+
+####Criar algo novo e mais enxuto e elegante como o codigo packing anterior só mudando a forma e ser mais enxuto e elegante
+
+def new_user(activate=False, admin=False):
+  
+  print(activate)
+  
+  print(admin)
+
+config = {"activate":False,
+          "admin":True}
+
+new_user(config.get('activate'), config.get('admin'))          
 
 
 
