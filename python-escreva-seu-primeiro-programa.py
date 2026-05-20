@@ -544,6 +544,50 @@ new_user1(**config1)
 
 ####Unpacking dos argumentos
 
+def unpacking_experiment(*args):
+  arg1 = args[0]
+  arg2 = args[1]
+  other = args[2:]
+  print(arg1)
+  print(arg2)
+  print(args)
+
+unpacking_experiment(1,2,3,4,5,6)
+
+####mesmo parametro nomeados. Se usamos **kwars, o chamador qualquer pode passar quaisquer parametro nomeados que podem ser acessado por kwargs como um dicionario e obter os valores do parametro nomeados
+
+def unpacking_experiment1(**kwargs1):
+  print(kwargs1)
+
+unpacking_experiment1(named="Test", other1 = "Other") 
+
+####3.15 Usando código já pronto: importando mó- dulos
+
+import math
+print(math.sqrt(9))
+
+# import math
+# math = 10
+# print(math.sqrt(9))
+# AttributeError: 'int' object has no attribute 'sqrt'
+
+import math as matematica
+print(matematica.sqrt(9))
+
+from math import log2 as log2_func
+print(log2_func(4096))
+print(log2_func(2048))
+print(log2_func(1024))
+print(log2_func(512))
+print(log2_func(256))
+print(log2_func(128))
+print(log2_func(64))
+print(log2_func(32))
+print(log2_func(16))
+print(log2_func(8))
+print(log2_func(4))
+print(log2_func(2))
+
 
 
 # Capitulo 4: primeiro programa: download de dados da copa 2014
