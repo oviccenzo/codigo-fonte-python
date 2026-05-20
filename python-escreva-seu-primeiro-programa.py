@@ -517,9 +517,9 @@ def new_user(activate=False, admin=False):
 
 config = {"activate":False,
           "admin":True}
-new_user(config.get('activate'), config.get('admin'))          
+new_user(config.get('activate'), config.get('admin'))
 
-####Criar algo novo e mais enxuto e elegante como o codigo packing anterior só mudando a forma e ser mais enxuto e elegante
+#####Criar algo novo e mais enxuto e elegante como o codigo packing anterior só mudando a forma e ser mais enxuto e elegante
 
 def new_user(activate=False, admin=False):
   
@@ -531,6 +531,18 @@ config = {"activate":False,
           "admin":True}
 
 new_user(config.get('activate'), config.get('admin'))          
+
+def new_user1(activate1 = False, admin1 = False, processador=False):
+  print(activate1)
+  print(admin1)
+  print(processador)
+
+config1 = {"activate1" : False,
+           "admin1" : True,
+           'processador':False}
+new_user1(**config1)
+
+####Unpacking dos argumentos
 
 
 
