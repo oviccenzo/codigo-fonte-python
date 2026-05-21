@@ -1,15 +1,77 @@
+#pratica
+
+
+num1 = int(input("Digite qualquer numero inteiro: "))
+num2 = 27
+
+while num2 > 0:
+  num2 = (input("Digite qualquer numero inteiro ou (0) para sair: "))
+  if not num2:
+    num2 = 27.
+  else:
+    num2 = float(num2)
+  print("O valor real do numero eh: {0}".format(num1 - (num1 * (num2 * 0.01))))
+
+salario1 = int(input("Salario?: "))
+imposto1 = 27. 
+while imposto1 > 0:
+  imposto1 = (input("Imposto ou (0) para sair: "))
+  if not imposto1:
+    imposto1 = 27.
+  else:
+    imposto1 = float(imposto1)
+  print("Valor real: {0}".format(salario1 - (salario1 * (imposto1 * 0.01))))
+
+saldo = float(input("Digite o saldo: "))
+salario = float(input("Digite o salario: "))
+
+totalDoSalario = saldo * salario
+
+print(f"O total do saldo com porcentagem é: {totalDoSalario}")
+
+complex(12 + 2, 2 + 20) #n1 + n2 , n2 + n1 
+
+n1 = int(input("Digite o primeiro numero -> n1: "))
+n2 = int(input("Digite o segundo numero -> n2:"))
+n3 = int(input("Digite o terceiro numero -> n3:"))
+
+complex(n1 + n2 + n3)
+
+print(f"O numero complexo é: {complex(n1 + n2, n2 + n1) , n2 + n3}")
+
+st = 'ola mundo'
+
+st[0]
+
+st[1:4]
+
+st[2:]
+
+st[:3]
+
+len(st)
+
+st = 'python 4'
+
+len(st)
+
+st = 'ola meu nome é viccenzo de oliveira nunes resende , eu sou pcda'
+
+len(st)
+
 # Capitulo 1: Iniciando com python
 
-print(1)
+1.5 primeiros passo abra o interpretador
 
-a = int(input("Digite um numero (a): "))
-b = int(input("Digite um numero (b): "))
-c = int(input("Digite um numero (c): "))
+!python --version
 
-for i in range(int(a),int(b),int(c)):
-    print(int(a + b + c) * i)
+1.6 primeira exploração
 
-print("Hello World")
+1
+
+3/2
+
+print("hello world")
 
 # Capitulo 2: aprendendo python na prática números e strings
 
@@ -23,7 +85,7 @@ print(1.) #float tambem
 
 print(1+2j) #complex
 
-Gerando numeros por meios das funções embutidos
+####Gerando numeros por meios das funções embutidos
 
 int(1.0)
 
@@ -41,7 +103,7 @@ float('nan')
 
 complex(1,2)
 
-ints e longs unificando no python 3
+####ints e longs unificando no python 3 
 
 Alguns exemplos de números e manipulações simples
 
@@ -61,7 +123,7 @@ print(complex(2,0) + 0 + 1j)
 
 print(2 + 0 + 1j)
 
-operadores aritmeticas
+####operadores aritmeticas
 
 print(1 + 2)
 
@@ -79,7 +141,7 @@ print(-3)
 
 print(2 ** 8)
 
-operadores de bits
+####operadores de bits
 
 print(1|0)
 
@@ -95,7 +157,7 @@ print(4 >> 2)
 
 print(~4)
 
-operações misturando tipos diferentes e as regras de coerção
+####operações misturando tipos diferentes e as regras de coerção
 
 print(100* 1.3) #preço mais 30%
 
@@ -107,11 +169,10 @@ type(1.0+2j)
 
 type(1.0+1.0)
 
-2.3-Criando e maniupulando texto: strings
+####2.3-Criando e maniupulando texto: strings
 
 #coding: utf-8
 "copa 2014"
-
 
 'copa do mundo 2014'
 
@@ -133,7 +194,7 @@ print(("Copa" "2014") == "Copa2014")
 input('Em qual cidade o legado da copa foi relevant'
       'para a população')
 
-len(strings), explicação len e para o tamanho da string
+####len(strings), explicação len e para o tamanho da string
 
 st = "macarana"
 
@@ -147,7 +208,7 @@ st[:3]
 
 len(st)
 
-Sequencias string
+####Sequencias string
 
 print("m" in "macarana")
 
@@ -157,12 +218,12 @@ print("x" not in "macarana")
 
 "a" * 3
 
-imutabilidade: novas strings criadas a partir de outras strings
+####imutabilidade: novas strings criadas a partir de outras strings
 
 minha_str = "livro python 3"
 print(minha_str[13] + "2")
 
-copiando e manipulando texto com a string
+####copiando e manipulando texto com a string
 
 minha_str = "livro python 3"
 minha_str = minha_str[0:13] + "2"
@@ -186,7 +247,7 @@ print(minha_str)
 
 "copa de 2014".replace("2014","2018")
 
-interpolando a string
+####interpolando a string
 
 (("%d dias para copa") % (100))
 
@@ -200,11 +261,11 @@ interpolando a string
 
 "{:^60}".format("centralizados á esquerda, ocupando 60")
 
-operações misturados tipos diferentes e as regras de coerção
+####operações misturados tipos diferentes e as regras de coerção
 
 print(100 * 1.3) #preço mais de 30%
 
-explorando as operações por conta propria
+####explorando as operações por conta propria
 
 type(1 + 2.0)
 
@@ -212,37 +273,28 @@ type(1 + 2j)
 
 type(1.0 + 1.0)
 
-Capitulo 3: Manipulações básicas
-
 #Capitulo 3:Manipulações básicas
 
-####3.1 Uma calculadora: o exemplo revisado
+3.1 Uma calculadora: o exemplo revisado
 
 imposto = 0.27
-
 salario = 5000
-
 print("Salario real: {}".format(salario - (salario * imposto)))
-
 print("Imposto: {}".format(salario * imposto))
 
-####Aplicando formatação da strings é um float
+3.1.1
 
 imposto = 0.27
-
 salario = 3000
-
 print("Valor real: {0}".format(salario - (salario * imposto)))
 
-####3.2-Pegando dados no terminal
+3.2-Pegando dados no terminal
 
 salario = int(input("Digite o salário: "))
-
 imposto = float(input("Imposto em % (exemplo: 27.5)? "))
-
 print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
 
-####3.3-Comparações: maior, menor, igual e outras
+3.3-Comparações: maior, menor, igual e outras
 
 print(1 >= 1)
 
@@ -256,26 +308,21 @@ print(2 <= 3)
 
 print(1 == 1.0)
 
-# print(10 >1j)
-# TypeError: '>' not supported between instances of 'int' and 'complex'
+# print(10 >1j) possui o erro esse codigo
 
-####3.4-Condicionais if else elif e else
+3.4-Condicionais if else elif e else
 
 salario = int(input("Salario? "))
-
 imposto = float(input("Imposto? "))
-
 if imposto == '':
   imposto = 27.5
 else:
   imposto = float(imposto)
-
 print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
 
-####indentação dos blocos de códigos
+indentação dos blocos de códigos
 
 imposto = float(input("Imposto? "))
-
 if imposto < 10:
   print("Medio")
 elif imposto < 27.5:
@@ -283,25 +330,33 @@ elif imposto < 27.5:
 else:
   print("Muito alto")
 
-####Expressão if
+comando if
+
+salario = int(input("Salario? "))
+imposto = float(input("Imposto em % (exemplo: 27.5)? "))
+
+if not imposto:
+  imposto = 27.5
+else:
+  imposto = float(imposto)
+
+print("Valor real: {0}".format( salario * (imposto * 0.01)))
+
+Expressão if
 
 imposto = 0.3
-
 "alto" if imposto > 0.27 else "baixo"
 
-
 imposto = 0.10
-
 "alto" if imposto > 0.27 else "baixo"
 
 valor_imposto = "alto" if imposto > 0.27 else "baixo"
-
 print(valor_imposto)
 
-####3.5 Operações logicos
+
+3.5 Operações logicos
 
 imposto = float(input("Imposto? "))
-
 if imposto < 10:
   print("baixo")
 elif imposto >= 10. and imposto <= 27.:
@@ -312,12 +367,10 @@ else:
   print("imposto invalido")
 
 
-####3.6 - loops com while
+3.6 - loops com while
 
 salario = float(input("Salario? "))
-
 imposto = 27.
-
 while imposto > 0:
   imposto = (input("Imposto ou (0) para sair: "))
   if not imposto:
@@ -326,12 +379,10 @@ while imposto > 0:
     imposto = float(imposto)
   print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
 
-####o loop pode ser interrompido com um comando break
+o loop pode ser interrompido com um comando o break que é quebrar linha
 
-salario = int(input("Salario? "))
-
-imposto = 27
-
+salario = float(input("Salario? ")) #esse linha falar para digitar qualquer valor do salario
+imposto = 27 #esse imposto tem o valor de 27
 while imposto > 0:
   imposto = input("Imposto ou (s) para sair: ")
   if not imposto:
@@ -343,7 +394,7 @@ while imposto > 0:
   print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
 
 
-####3.7 - primeiro estrutura de dados: listas
+3.7 - primeiro estrutura de dados: listas
 
 lista = [1,2,3,4,5]
 print(lista)
@@ -357,27 +408,19 @@ print(lista)
 lista = [[1,2,3], "salario",10]
 print(lista)
 
-####Sequencia de lista em python ou seja podemos perguntar seu tamanho e acessar elementos por indices ou trechos
+Sequencia de lista em python ou seja podemos perguntar seu tamanho e acessar elementos por indices ou trechos
 
-lista =["impostos","salario","altos","baixos"]
+lista =["impostos","salarios","altos","baixos"]
+(lista[0] , lista[1] , lista[2] , lista[3])
 
-lista[0]
 
-lista[-1]
 
-lista[2:4]
-
-####lista são mutaveis
+lista são mutaveis
 
 lista = ["impostos","salarios","altos","baixos"]
+(lista[0] ,lista[1] ,lista[2], lista[3])
 
-lista[2] = "altos"
-
-lista[3] = "baixo"
-
-print(lista)
-
-####ifs e listas
+ifs e listas
 
 lista = []
 
@@ -386,32 +429,28 @@ if lista:
 else:
   print("Sempre sou executado")
 
-####3.8 loop pythônicos com for e listas
+3.8 loop pythônicos com for e listas
 
 imposto = ['MEI','Simples']
 
 for imposto in imposto:
   print(imposto)
 
-####comando for em detalhe
+comando for em detalhe
 
 lista = [0,1,2,3,4,5,6,7,8,9,10]
 
 for i in lista:
   print(i)
 
-####Exemplo do codigo no intervalo de zero ate n
-
-
-
-####3.9 - Percorrendo intervalos de zero ate n com range()
+3.9 - Percorrendo intervalos de zero ate n com range()
 
 for i in range(11):
   print(i)
 
 print(range(11-1))
 
-####Exemplo do tipo que é range
+Exemplo do tipo que é range
 
 #Gerar lista com (fim)
 print(list(range(11)))
@@ -440,9 +479,7 @@ soma = ((num1 + num2) * num3)
 
 print(range(soma))
 
-
-
-####3.10 Enumerando coleções com for e função enumerate
+3.10 Enumerando coleções com for e função enumerate
 
 impostos = ['MEI - micro empreendedor individual','ICMS - Imposto sobre Operações relativas','Imposto sobre Transmissão Causa mortis e Doação','IPI - Imposto sobre Produtos Industrializados','IOF - Imposto sobre Operações Financeiras','IRPF -  restituição de Imposto de Renda de Pessoas Físicas ','CSLL - Contribuição Social Sobre o Lucro Líquido']
 
@@ -459,164 +496,171 @@ salario = [a + b,b + c, c + a]
 for i in enumerate(salario):
   print(i)
 
-####3.11 declarando funções comando def
+3.11 declarando funções comando def
 
 def sum(a,b):
-  return a + b
+  return a + b #+ c
 
 c = sum(1,3)
 print(c)
 
-####3.12 Valores padronizados de argumentos
+3.12 valores padronizados de argumentos
 
-def salario_desconto(salario2,imposto = 27.):
-  return salario2 - (salario2 * (imposto * 0.01))
+def salarioDescontadoImposto(salario, imposto = 27.):
+  return salario - (salario * (imposto * 0.01))
 
-print(f'O valor do salario eh: {salario_desconto(5000)}')
+salarioDescontadoImposto(5000)
 
-####exemplo pratica do função def
+3.13 parametros nomeados
 
-def calcular(pa,pg,sn):
-  pa = int(input("Digite o primeiro numero a: ")) #44 + 46 = 90 / 2 = 45
-  pg = int(input("Digite o segundo numero b: "))
-  sn = int(input("Digite o terceiro numero c: "))
-  soma = pa + pg + sn
-  return soma
+salarioDescontadoImposto(5000, imposto=0.10)
 
-# soma = pa + pg + sn
-print(f"O resultado dos tres numero eh: {calcular(2,3,4)}")
-
-
-####3.13 Parâmetros nomeados
-
-print(f"O salario do desconto eh: {salario_desconto(salario2=5000)}")
-print(f"O salario do desconto eh: {salario_desconto(4000, imposto=0.1)}")
-print(f"O salario do desconto eh: {salario_desconto(5000, imposto = 0.1)}")
-print(f"O salario do desconto eh: {salario_desconto(6000, imposto = 0.1)}")
-print(f"O salario do desconto eh: {salario_desconto(7000, imposto = 0.1)}")
-print(f"O salario do desconto eh: {salario_desconto(8000, imposto = 0.1)}")
-print(f"O salario do desconto eh: {salario_desconto(9000, imposto = 0.1)}")
-
-
-
-####3.14 Recebendo um número arbitrário de argu- mentos: packing & unpacking
+3.14 recebendo um numero arbitrario de argumentos: packing & unpacking
 
 from datetime import date
-d = (2019,3,5)
+
+d = (2013, 3 , 15)
 date(d[0], d[1], d[2])
 
-####packing
+exemplo 1: que é o packing que está na mesmo ordem só mudando o codigo
 
 from datetime import date
-d = (2019,3,5)
+d = (2013, 3 , 15)
 date(*d)
 
-def new_user(activate=False, admin=False):
-  print(activate)
+exemplo 2: a configuração do administrador ou ativo , verdade ou falso
+
+def novoUso(active = True, admin = False):
+  print(active)
   print(admin)
 
-config = {"activate":False,
-          "admin":True}
-new_user(config.get('activate'), config.get('admin'))
+config = {"active": False,
+          "admin" : True}
 
-#####Criar algo novo e mais enxuto e elegante como o codigo packing anterior só mudando a forma e ser mais enxuto e elegante
+novoUso(config.get("active"),config.get("admin"))
 
-def new_user(activate=False, admin=False):
-  
-  print(activate)
-  
+
+exemplo 3: o mesmo codigo só mudando linha do codigo para ficar mais exunto e elegante
+
+def novoUso(active = True, admin = False):
+  print(active)
   print(admin)
 
-config = {"activate":False,
-          "admin":True}
+config = {"active" : False , "admin" : True }
 
-new_user(config.get('activate'), config.get('admin'))          
+novoUso(**config)
 
-def new_user1(activate1 = False, admin1 = False, processador=False):
-  print(activate1)
-  print(admin1)
-  print(processador)
+Exemplo 4: unpacking dos argumentos
 
-config1 = {"activate1" : False,
-           "admin1" : True,
-           'processador':False}
-new_user1(**config1)
-
-####Unpacking dos argumentos
-
-def unpacking_experiment(*args):
-  arg1 = args[0]
-  arg2 = args[1]
+def unpackingExperiment(*args):
+  args1 = args[0]
+  args2 = args[1]
   other = args[2:]
-  print(arg1)
-  print(arg2)
-  print(args)
+  print(args1)
+  print(args2)
+  print(other)
 
-unpacking_experiment(1,2,3,4,5,6)
+unpackingExperiment(1,2,3,4,5,6)
 
-####mesmo parametro nomeados. Se usamos **kwars, o chamador qualquer pode passar quaisquer parametro nomeados que podem ser acessado por kwargs como um dicionario e obter os valores do parametro nomeados
+Exemplo 5: kwargs dos argumentos
 
-def unpacking_experiment1(**kwargs1):
-  print(kwargs1)
+def unpackingExperiment(**kwargs):
+  print(kwargs)
 
-unpacking_experiment1(named="Test", other1 = "Other") 
+unpackingExperiment(named="Teste", other = "Other")
 
-####3.15 Usando código já pronto: importando mó- dulos
+3.15 usando código já pronto: importando módulos
 
 import math
 print(math.sqrt(9))
 
+exemplo do erro
+
 # import math
 # math = 10
 # print(math.sqrt(9))
+# exemplo do erro
+# AttributeError                            Traceback (most recent call last)
+
+# /tmp/ipython-input-4096810097.py in <cell line: 0>()
+#       1 import math
+#       2 math = 10
+# ----> 3 print(math.sqrt(9))
+
 # AttributeError: 'int' object has no attribute 'sqrt'
 
+exemplo 3 criar um modulo alia ou um objeto importado
+
 import math as matematica
+
 print(matematica.sqrt(9))
 
-from math import log2 as log2_func
-print(log2_func(4096))
-print(log2_func(2048))
-print(log2_func(1024))
-print(log2_func(512))
-print(log2_func(256))
-print(log2_func(128))
-print(log2_func(64))
-print(log2_func(32))
-print(log2_func(16))
-print(log2_func(8))
-print(log2_func(4))
-print(log2_func(2))
+exemplo 4: importar apenas um objetos especifico para uso do objeto que é from o modulo e depois o import que importar
 
+from unittest import TestCase as tc
 
+print(tc)
+
+from math import log2 as l2
+
+print(l2(1024))
 
 # Capitulo 4: primeiro programa: download de dados da copa 2014
 
-####4.1 dowload de arquivo de tamanho conhecido
+4.1 criando uma função para fazer dowloada no navegador da web e ler o tamanho do arquivos
 
+##indereço do buffe size
 BUFF_SIZE = 1024
-def dowload_length(responsive, output, length):
+def dowloadLength(response, output, length):
   times = length / BUFF_SIZE
   if length % BUFF_SIZE > 0:
     times += 1
   for time in range(times):
-    output.write(responsive.read(BUFF_SIZE))
-    print("Download %d " % (((times * BUFF_SIZE)/length) * 100))
+    output.write(response.read(BUFF_SIZE))
+    print("Dowloaded %d " % (((time * BUFF_SIZE)/length)*100))
 
-BUFF_SIZE = 1024
-def dowload_length(responsive, output, length):
-  times = length / BUFF_SIZE
-  if length % BUFF_SIZE > 0:
-    times += 1
-  for time in range(int(times)):
-    # In a real scenario, responsive.read and output.write would be used with actual file/network objects
-    # For demonstration, we'll simulate a print, and calculate progress incrementally.
-    # output.write(responsive.read(BUFF_SIZE))
-    current_progress_bytes = min(length, (time + 1) * BUFF_SIZE)
-    percentage = (current_progress_bytes / length) * 100
-    print(f"Download {current_progress_bytes} bytes ({percentage:.2f} %)")
-do = dowload_length(12,30,90)
-print()
+
+criando outra função para download na web
+
+def dowload(response, output):
+  totalDowloaded = 0
+  while True:
+    data = response.read(BUFF_SIZE)
+    totalDowloaded += len(data)
+    if not data:
+      break
+    output.write(data)
+    print(f"Downloaded {bytes}".format(bytes = totalDowloaded))
+
+
+4.2 unindo dois programa completo para formar um só programa
+
+# #coding: utf-8
+# import io
+# import sys
+# import urllib.request as request
+
+# BUFF_SIZE = 1024
+
+# def main():
+#   response = request.urlopen(sys.argv[1])
+#   out_file = io.FileIO("saida.zip", mode="w")
+
+#   content_length = response.getheader("Content-Length")
+#   if content_length:
+#     length = int(content_length)
+
+4.3 definindo funções main
+
+def main():
+  print("ola")
+
+if __name__ == "__main__":
+  main()
+
+
+
+
 
 #capitulo 5:
 
