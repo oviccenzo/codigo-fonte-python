@@ -1,6 +1,5 @@
 #pratica
 
-
 num1 = int(input("Digite qualquer numero inteiro: "))
 num2 = 27
 
@@ -32,12 +31,21 @@ print(f"O total do saldo com porcentagem é: {totalDoSalario}")
 complex(12 + 2, 2 + 20) #n1 + n2 , n2 + n1 
 
 n1 = int(input("Digite o primeiro numero -> n1: "))
-n2 = int(input("Digite o segundo numero -> n2:"))
-n3 = int(input("Digite o terceiro numero -> n3:"))
+n2 = int(input("Digite o segundo numero -> n2: "))
+n3 = int(input("Digite o terceiro numero -> n3: "))
+n4 = int(input("Digite o quarto numero -> n4: "))
 
-complex(n1 + n2 + n3)
+complex(n1 + n2 + n3 + n4)
 
-print(f"O numero complexo é: {complex(n1 + n2, n2 + n1) , n2 + n3}")
+print(f"O numero de n1 eh: {n1}")
+print(f"O numero de n2 eh: {n2}")
+print(f"O numero de n3 eh: {n3}")
+print(f"O numero de n4 eh: {n4}")
+
+somaTotal = n1 + n2 + n3 + n4
+
+print(f"O numero complexo é: {complex(n2 + n3+ n1 + n4, n2 + n1 +n3 + n4) }")
+print(f"A soma total é: {somaTotal}")
 
 st = 'ola mundo'
 
@@ -192,7 +200,7 @@ Uso: consulta_base [OPCOES]
 print(("Copa" "2014") == "Copa2014")
 
 input('Em qual cidade o legado da copa foi relevant'
-      'para a população')
+      'para a população: ')
 
 ####len(strings), explicação len e para o tamanho da string
 
@@ -275,7 +283,7 @@ type(1.0 + 1.0)
 
 #Capitulo 3:Manipulações básicas
 
-3.1 Uma calculadora: o exemplo revisado
+####3.1 Uma calculadora: o exemplo revisado
 
 imposto = 0.27
 salario = 5000
@@ -288,13 +296,13 @@ imposto = 0.27
 salario = 3000
 print("Valor real: {0}".format(salario - (salario * imposto)))
 
-3.2-Pegando dados no terminal
+####3.2-Pegando dados no terminal
 
 salario = int(input("Digite o salário: "))
 imposto = float(input("Imposto em % (exemplo: 27.5)? "))
 print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
 
-3.3-Comparações: maior, menor, igual e outras
+####3.3-Comparações: maior, menor, igual e outras
 
 print(1 >= 1)
 
@@ -310,45 +318,45 @@ print(1 == 1.0)
 
 # print(10 >1j) possui o erro esse codigo
 
-3.4-Condicionais if else elif e else
+####3.4-Condicionais if else elif e else
 
-salario = int(input("Salario? "))
-imposto = float(input("Imposto? "))
-if imposto == '':
-  imposto = 27.5
+salario1 = int(input("Salario? "))
+imposto1 = float(input("Imposto? "))
+if imposto1 == '':
+  imposto1 = 27.5
 else:
-  imposto = float(imposto)
-print("Valor real: {0}".format(salario - (salario * (imposto * 0.01))))
+  imposto1 = float(imposto1)
+print("Valor real: {0}".format(salario1 - (salario1 * (imposto1 * 0.01))))
 
 indentação dos blocos de códigos
 
-imposto = float(input("Imposto? "))
-if imposto < 10:
+imposto2 = float(input("Imposto? "))
+if imposto2 < 10:
   print("Medio")
-elif imposto < 27.5:
+elif imposto2 < 27.5:
   print("Alto")
 else:
   print("Muito alto")
 
 comando if
 
-salario = int(input("Salario? "))
-imposto = float(input("Imposto em % (exemplo: 27.5)? "))
+salario3 = int(input("Salario? "))
+imposto3 = float(input("Imposto em % (exemplo: 27.5)? "))
 
-if not imposto:
-  imposto = 27.5
+if not imposto3:
+  imposto3 = 27.5
 else:
-  imposto = float(imposto)
+  imposto3 = float(imposto3)
 
-print("Valor real: {0}".format( salario * (imposto * 0.01)))
+print("Valor real: {0}".format( salario3 * (imposto3 * 0.01)))
 
 Expressão if
 
-imposto = 0.3
-"alto" if imposto > 0.27 else "baixo"
+imposto4 = 0.3
+"alto" if imposto4 > 0.27 else "baixo"
 
-imposto = 0.10
-"alto" if imposto > 0.27 else "baixo"
+imposto5 = 0.10
+"alto" if imposto5 > 0.27 else "baixo"
 
 valor_imposto = "alto" if imposto > 0.27 else "baixo"
 print(valor_imposto)
@@ -356,12 +364,12 @@ print(valor_imposto)
 
 3.5 Operações logicos
 
-imposto = float(input("Imposto? "))
-if imposto < 10:
+imposto6 = float(input("Imposto? "))
+if imposto6 < 10:
   print("baixo")
-elif imposto >= 10. and imposto <= 27.:
+elif imposto6 >= 10. and imposto6 <= 27.:
   print("medio")
-elif imposto > 27. and imposto < 100:
+elif imposto6 > 27. and imposto6 < 100:
   print("alto")
 else:
   print("imposto invalido")
@@ -369,32 +377,32 @@ else:
 
 3.6 - loops com while
 
-salario = float(input("Salario? "))
-imposto = 27.
-while imposto > 0:
-  imposto = (input("Imposto ou (0) para sair: "))
-  if not imposto:
-    imposto = 27.
+salario7 = float(input("Salario? "))
+imposto7 = 27.
+while imposto7 > 0:
+  imposto7 = (input("Imposto ou (0) para sair: "))
+  if not imposto7:
+    imposto7 = 27.
   else:
-    imposto = float(imposto)
-  print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
+    imposto7 = float(imposto7)
+  print("Valor real: {0} ".format(salario7 - (salario7 * (imposto7 * 0.01))))
 
 o loop pode ser interrompido com um comando o break que é quebrar linha
 
-salario = float(input("Salario? ")) #esse linha falar para digitar qualquer valor do salario
-imposto = 27 #esse imposto tem o valor de 27
-while imposto > 0:
-  imposto = input("Imposto ou (s) para sair: ")
-  if not imposto:
+salario8 = float(input("Salario? ")) #esse linha falar para digitar qualquer valor do salario
+imposto8 = 27 #esse imposto tem o valor de 27
+while imposto8 > 0:
+  imposto8 = input("Imposto ou (s) para sair: ")
+  if not imposto8:
     imposto = 27.
-  elif imposto == 's':
+  elif imposto8 == 's':
     break
   else:
-    imposto = float(imposto)
-  print("Valor real: {0} ".format(salario - (salario * (imposto * 0.01))))
+    imposto8 = float(imposto8)
+  print("Valor real: {0} ".format(salario8 - (salario8 * (imposto8 * 0.01))))
 
 
-3.7 - primeiro estrutura de dados: listas
+####3.7 - primeiro estrutura de dados: listas
 
 lista = [1,2,3,4,5]
 print(lista)
@@ -408,19 +416,17 @@ print(lista)
 lista = [[1,2,3], "salario",10]
 print(lista)
 
-Sequencia de lista em python ou seja podemos perguntar seu tamanho e acessar elementos por indices ou trechos
+####Sequencia de lista em python ou seja podemos perguntar seu tamanho e acessar elementos por indices ou trechos
 
 lista =["impostos","salarios","altos","baixos"]
 (lista[0] , lista[1] , lista[2] , lista[3])
 
-
-
-lista são mutaveis
+####lista são mutaveis
 
 lista = ["impostos","salarios","altos","baixos"]
 (lista[0] ,lista[1] ,lista[2], lista[3])
 
-ifs e listas
+####ifs e listas
 
 lista = []
 
@@ -429,28 +435,27 @@ if lista:
 else:
   print("Sempre sou executado")
 
-3.8 loop pythônicos com for e listas
+####3.8 loop pythônicos com for e listas
 
-imposto = ['MEI','Simples']
+impostos9 = ["MEI","Simples"]
+for imposto in impostos9:
+  print(impostos9)
 
-for imposto in imposto:
-  print(imposto)
-
-comando for em detalhe
+####comando for em detalhe
 
 lista = [0,1,2,3,4,5,6,7,8,9,10]
 
 for i in lista:
   print(i)
 
-3.9 - Percorrendo intervalos de zero ate n com range()
+####3.9 - Percorrendo intervalos de zero ate n com range()
 
 for i in range(11):
   print(i)
 
 print(range(11-1))
 
-Exemplo do tipo que é range
+####Exemplo do tipo que é range
 
 #Gerar lista com (fim)
 print(list(range(11)))
@@ -479,7 +484,7 @@ soma = ((num1 + num2) * num3)
 
 print(range(soma))
 
-3.10 Enumerando coleções com for e função enumerate
+####3.10 Enumerando coleções com for e função enumerate
 
 impostos = ['MEI - micro empreendedor individual','ICMS - Imposto sobre Operações relativas','Imposto sobre Transmissão Causa mortis e Doação','IPI - Imposto sobre Produtos Industrializados','IOF - Imposto sobre Operações Financeiras','IRPF -  restituição de Imposto de Renda de Pessoas Físicas ','CSLL - Contribuição Social Sobre o Lucro Líquido']
 
@@ -496,39 +501,44 @@ salario = [a + b,b + c, c + a]
 for i in enumerate(salario):
   print(i)
 
-3.11 declarando funções comando def
+####3.11 declarando funções comando def
 
-def sum(a,b):
-  return a + b #+ c
+def sum(a,b,c):
+  return a + b + c #+ c
 
-c = sum(1,3)
-print(c)
+c1 = sum(1,3,4)
+print(c1)
 
-3.12 valores padronizados de argumentos
+####3.12 valores padronizados de argumentos
 
-def salarioDescontadoImposto(salario, imposto = 27.):
-  return salario - (salario * (imposto * 0.01))
+def salarioDescontadoImposto1(salario9, imposto9 = 27.):
+  return salario9 - (salario9 * (imposto9 * 0.01))
 
-salarioDescontadoImposto(5000)
+salarioDescontadoImposto1(5000)
 
-3.13 parametros nomeados
+####3.13 parametros nomeados
 
-salarioDescontadoImposto(5000, imposto=0.10)
+print(salarioDescontadoImposto1(1000, imposto9 = 0.10))
+print(salarioDescontadoImposto1(2000, imposto9 = 0.10))
+print(salarioDescontadoImposto1(3000, imposto9 = 0.10))
+print(salarioDescontadoImposto1(4000, imposto9 = 0.10))
+print(salarioDescontadoImposto1(5000, imposto9 = 0.10))
+print(salarioDescontadoImposto1(6000, imposto9 = 0.10))
 
-3.14 recebendo um numero arbitrario de argumentos: packing & unpacking
+###3.14 recebendo um numero arbitrario de argumentos: packing & unpacking
 
 from datetime import date
 
 d = (2013, 3 , 15)
 date(d[0], d[1], d[2])
 
-exemplo 1: que é o packing que está na mesmo ordem só mudando o codigo
+####exemplo 1: que é o packing que está na mesmo ordem só mudando o codigo
 
 from datetime import date
 d = (2013, 3 , 15)
 date(*d)
 
-exemplo 2: a configuração do administrador ou ativo , verdade ou falso
+####exemplo 2: a configuração do administrador ou ativo , verdade ou falso
 
 def novoUso(active = True, admin = False):
   print(active)
@@ -540,7 +550,7 @@ config = {"active": False,
 novoUso(config.get("active"),config.get("admin"))
 
 
-exemplo 3: o mesmo codigo só mudando linha do codigo para ficar mais exunto e elegante
+####exemplo 3: o mesmo codigo só mudando linha do codigo para ficar mais exunto e elegante
 
 def novoUso(active = True, admin = False):
   print(active)
@@ -550,7 +560,7 @@ config = {"active" : False , "admin" : True }
 
 novoUso(**config)
 
-Exemplo 4: unpacking dos argumentos
+####Exemplo 4: unpacking dos argumentos
 
 def unpackingExperiment(*args):
   args1 = args[0]
@@ -562,19 +572,19 @@ def unpackingExperiment(*args):
 
 unpackingExperiment(1,2,3,4,5,6)
 
-Exemplo 5: kwargs dos argumentos
+####Exemplo 5: kwargs dos argumentos
 
 def unpackingExperiment(**kwargs):
   print(kwargs)
 
 unpackingExperiment(named="Teste", other = "Other")
 
-3.15 usando código já pronto: importando módulos
+####3.15 usando código já pronto: importando módulos
 
 import math
 print(math.sqrt(9))
 
-exemplo do erro
+####exemplo do erro
 
 # import math
 # math = 10
@@ -589,13 +599,13 @@ exemplo do erro
 
 # AttributeError: 'int' object has no attribute 'sqrt'
 
-exemplo 3 criar um modulo alia ou um objeto importado
+####exemplo 3 criar um modulo alia ou um objeto importado
 
 import math as matematica
 
 print(matematica.sqrt(9))
 
-exemplo 4: importar apenas um objetos especifico para uso do objeto que é from o modulo e depois o import que importar
+####exemplo 4: importar apenas um objetos especifico para uso do objeto que é from o modulo e depois o import que importar
 
 from unittest import TestCase as tc
 
