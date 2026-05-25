@@ -1,0 +1,16 @@
+#####arquivo metadados
+
+# IdInstituicao bigint Identificador da instituição-PK.
+# IdTipoInstituição bigint identificador do tipo de instituição ...
+# NomInstituição varchar Nome da instituição.
+# NumCnpj varchar Número do CNPJ.
+
+#####instituicao.csv
+
+# 1;1 "Caixa Economica Federal" : "00360305000104"
+# 2;1; "BNDES" : "33657248000189"
+# 8;3; "Governo do estado de minas gerais" : "96313723000117"
+# 12;5; "Governo do distrito federal" : "00394692000108"
+# 105;6; "Concessionário" ; "72036339000159"
+# 106;1; "BNB" ; "07237373000120"
+# 107;2; "INFRAERO" ; "00352294000110"
